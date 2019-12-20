@@ -1,38 +1,193 @@
-.App {
-  text-align: center;
+html {
+    background: #397fb3;
+    background: -webkit-linear-gradient(left, #139dba , #48d392);
+    background: -o-linear-gradient(right, #139dba, #48d392);
+    background: -moz-linear-gradient(right, #139dba, #48d392);
+    background: linear-gradient(to right, #139dba , #48d392);
+    font-family: 'NanumSquareRound',sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root,
+.container,
+body,
+html {
+    height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.loader {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
 }
 
-.App-link {
-  color: #61dafb;
+.Main {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    overflow: auto;
+    flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calculator-area {
+    height: 100%;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.explanation-body {
+    height: 100%;
+    width: 600px;
+}
+
+.switch {
+    margin: 10px;
+    float: right;
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(228, 228, 228);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border: 1px solid rgba(134, 134, 134, 0.2);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    bottom: 0.01px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #48d392;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #48d392;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.result {
+    margin-top: 90px;
+    width: 100%;
+    height: 90px;
+}
+
+.result p {
+    text-align: right;
+}
+
+.calculator-body {
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 4px 4px 16px #2e2e2e;
+    border-radius: 20px;
+    width: 350px;
+    height: 600px;
+    background-color: rgb(246, 253, 251);
+}
+
+.button-area {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+button {
+    background-color: #00ff0000;
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.symbol {
+    background-color: rgb(246, 253, 251);
+}
+
+#same {
+    background-color: #48d392;
+    color: white;
+}
+
+.calculator-body[data-theme="dark"] {
+    background-color: rgb(35, 43, 63);
+}
+.calculator-body[data-theme="dark"] .button-area {
+    background-color: rgb(48, 57, 79);
+}
+
+.calculator-body[data-theme="dark"] button{
+    color: rgb(153, 167, 160);
+}
+
+.calculator-body[data-theme="dark"] .symbol{
+    background-color: rgb(35, 43, 63);
+    color: #48d392;
+}
+
+.calculator-body[data-theme="dark"] #same{
+    color: rgb(35, 43, 63);
+}
+
+.calculator-body[data-theme="dark"] p {
+    color: #48d392;
 }
