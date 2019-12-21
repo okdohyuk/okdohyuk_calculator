@@ -51,7 +51,6 @@ class CalculationComponent extends Component {
             this.setState({
                 result: "error"
             })
-
         }
     };
 

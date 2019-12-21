@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import './App.css';
 import CalculationComponent from './components/CalculationComponent';
 import Explanation from "./components/Explanation";
 import DarkMode from "./components/DarkMode";
+import './App.css';
 
 class App extends Component {
   state = {
@@ -11,7 +11,7 @@ class App extends Component {
   componentDidMount() {
     setTimeout(() => {
         this.setState({ isLoading: false });
-    }, 500);
+    }, 300);
 }
   render() {
     const { isLoading } = this.state;

@@ -1,3 +1,23 @@
+@charset "utf-8";
+
+/*
+ *
+ * CSS CONTENTS:
+ *
+ * 01. Web Font
+ * 02. Type Selector Reset
+ * 03. Loding
+ * 04. Calculator
+ * 05. Darkmode switch
+ * 06. Darkmode
+ * 07. Explanation
+ *
+ */
+
+/* Web Font Load */
+@import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
+
+/* Type Selector Reset */
 html {
     background: #397fb3;
     background: -webkit-linear-gradient(left, #139dba , #48d392);
@@ -16,7 +36,18 @@ body {
     height: 100%;
 }
 
+h1 {
+    font-size: 35px;
+}
 
+h2 {
+    font-size:25px;
+}
+
+.use {
+    line-height: 25px;
+    font-size: 19px;
+}
 
 #root,
 .container,
@@ -25,52 +56,111 @@ html {
     height: 100%;
 }
 
-.loader {
-    background-color: black;
-    color: white;
-    width: 100%;
+.Main {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: auto;
+    display: flex;
     height: 100%;
+}
+
+/* Loding */
+.loader {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
     font-weight: 300;
 }
 
-.Main {
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    overflow: auto;
-    flex-wrap: wrap;
-}
-
+/* Calculator */
 .calculator-area {
-    height: 100%;
-    width: 600px;
-    display: flex;
     justify-content: center;
     align-items: center;
-}
-
-
-
-.explanation-body {
+    display: flex;
     height: 100%;
     width: 600px;
 }
 
-.Explanation {
-    padding: 10px;
-    padding-top: 15%;
+.result {
+    margin-top: 90px;
+    width: 100%;
+    height: 90px;
 }
 
+.calculator-body {
+    width: 350px;
+    height: 600px;
+    border: 1px solid black;
+    box-shadow: 4px 4px 16px #2e2e2e;
+    border-radius: 20px;
+    background-color: rgb(246, 253, 251);
+}
+
+.result p {
+    overflow: hidden;
+    white-space: nowrap;
+    height: 100%;
+    width: 100%;
+    color: rgb(56, 62, 70);
+    text-overflow: ellipsis;
+    text-align: right;
+    font-size: 50px;
+}
+
+.button-area {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: white;
+}
+
+button {
+    margin: 10px;
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    background-color: #00ff0000;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(56, 62, 70);
+}
+
+button:hover {
+    box-shadow: 0.1px 0.1px 2px #2e2e2e;
+}
+
+button:active {
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.symbol {
+    background-color: rgb(246, 253, 251);
+}
+
+#same {
+    background-color: #48d392;
+    color: white;
+}
+
+/* Darkmode switch */
 .switch {
+    display: inline-block;
+    position: relative;
     margin: 10px;
     float: right;
-    position: relative;
-    display: inline-block;
-    width: 40px;
     height: 22px;
+    width: 40px;
 }
 
 .switch input {
@@ -82,10 +172,10 @@ html {
 .slider {
     position: absolute;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
     background-color: rgb(228, 228, 228);
     -webkit-transition: 0.4s;
     transition: 0.4s;
@@ -117,7 +207,6 @@ input:checked + .slider:before {
     transform: translateX(18px);
 }
 
-/* Rounded sliders */
 .slider.round {
     border-radius: 34px;
 }
@@ -126,65 +215,7 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-.result {
-    margin-top: 90px;
-    width: 100%;
-    height: 90px;
-}
-
-.result p {
-    height: 100%;
-    width: 100%;
-    color: rgb(56, 62, 70);
-    text-align: right;
-    font-size: 50px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.calculator-body {
-    border: 1px solid black;
-    box-shadow: 4px 4px 16px #2e2e2e;
-    border-radius: 20px;
-    width: 350px;
-    height: 600px;
-    background-color: rgb(246, 253, 251);
-}
-
-.button-area {
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: white;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-button {
-    background-color: #00ff0000;
-    margin: 10px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50px;
-    border: none;
-    outline: none;
-    font-size: 25px;
-    font-weight: bold;
-    color: rgb(56, 62, 70);
-}
-
-.symbol {
-    background-color: rgb(246, 253, 251);
-}
-
-#same {
-    background-color: #48d392;
-    color: white;
-}
-
+/* Darkmode */
 .calculator-body[data-theme="dark"] {
     background-color: rgb(35, 43, 63);
 }
@@ -209,20 +240,13 @@ button {
     color: #48d392;
 }
 
-h1 {
-    font-size: 35px;
+/* Explanation */
+.explanation-body {
+    height: 100%;
+    width: 600px;
 }
 
-h2 {
-    font-size:25px;
+.explanation {
+    padding: 10px;
+    padding-top: 15%;
 }
-
-li {
-    line-height: 25px;
-    font-size: 20px;
-}
-
-.use {
-    line-height: 25px;
-}
-
