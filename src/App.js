@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import ResultComponent from './components/ResultComponent';
-import KeyPadComponent from "./components/KeyPadComponent";
+import CalculationComponent from './components/CalculationComponent';
 import Explanation from "./components/Explanation";
 import DarkMode from "./components/DarkMode";
 
@@ -26,8 +25,7 @@ class App extends Component {
       <div className="calculator-area">
         <div className="calculator-body">
           <DarkMode />
-          <ResultComponent result={this.state.result}/>
-          <KeyPadComponent onClick={this.onClick}/>
+          <CalculationComponent />
         </div>
       </div>
       <div className="explanation-body"><Explanation /></div>

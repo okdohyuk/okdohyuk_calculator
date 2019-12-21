@@ -7,11 +7,16 @@ html {
     font-family: 'NanumSquareRound',sans-serif;
 }
 
+html, body, div, input, p, button {
+	margin: 0;
+	padding: 0;
+}
+
 body {
-    margin: 0;
-    padding: 0;
     height: 100%;
 }
+
+
 
 #root,
 .container,
@@ -52,6 +57,11 @@ html {
 .explanation-body {
     height: 100%;
     width: 600px;
+}
+
+.Explanation {
+    padding: 10px;
+    padding-top: 15%;
 }
 
 .switch {
@@ -123,11 +133,17 @@ input:checked + .slider:before {
 }
 
 .result p {
+    height: 100%;
+    width: 100%;
+    color: rgb(56, 62, 70);
     text-align: right;
+    font-size: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .calculator-body {
-    background-color: white;
     border: 1px solid black;
     box-shadow: 4px 4px 16px #2e2e2e;
     border-radius: 20px;
@@ -157,6 +173,7 @@ button {
     outline: none;
     font-size: 25px;
     font-weight: bold;
+    color: rgb(56, 62, 70);
 }
 
 .symbol {
@@ -191,3 +208,21 @@ button {
 .calculator-body[data-theme="dark"] p {
     color: #48d392;
 }
+
+h1 {
+    font-size: 35px;
+}
+
+h2 {
+    font-size:25px;
+}
+
+li {
+    line-height: 25px;
+    font-size: 20px;
+}
+
+.use {
+    line-height: 25px;
+}
+
