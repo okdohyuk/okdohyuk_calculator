@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "adbb5e7c4b8d6f76b2182e1231782fce",
+    "revision": "d40daebae5eb4611862159a247c10a18",
     "url": "/okdohyuk_calculator/index.html"
   },
   {
-    "revision": "792c8b70c8630c9a623d",
-    "url": "/okdohyuk_calculator/static/css/main.38587c0f.chunk.css"
+    "revision": "49d6a278e6fd12884e30",
+    "url": "/okdohyuk_calculator/static/css/main.1bb80d6b.chunk.css"
   },
   {
     "revision": "078bb917c883c7fd9011",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/okdohyuk_calculator/static/js/2.a40103b9.chunk.js.LICENSE"
   },
   {
-    "revision": "792c8b70c8630c9a623d",
-    "url": "/okdohyuk_calculator/static/js/main.5bfa8c65.chunk.js"
+    "revision": "49d6a278e6fd12884e30",
+    "url": "/okdohyuk_calculator/static/js/main.beaf0e2b.chunk.js"
   },
   {
     "revision": "4a7dc54c4d98e4202e60",
