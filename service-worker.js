@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/okdohyuk_calculator/precache-manifest.ad3f617dc157ef43a60237fa2ca328ad.js"
+  "/okdohyuk_calculator/precache-manifest.6818090fa5adf9a4a944deafc482e16d.js"
 );
 
 self.addEventListener('message', (event) => {
