@@ -240,11 +240,9 @@ input:checked + .slider:before {
 
 /* Explanation */
 .explanation-body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
     height: 100%;
     width: 600px;
-}
-
-.explanation {
-    padding: 10px;
-    padding-top: 15%;
 }
