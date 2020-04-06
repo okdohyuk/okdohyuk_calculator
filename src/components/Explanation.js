@@ -12,8 +12,7 @@ class Explanation extends Component {
                 </p>
                 <h2>개발환경</h2>
                 <p className="use">
-                    라이브러리: 리액트<br />
-                    언어: HTML, CSS, JSX
+                    리액트 Class Component
                 </p>
             </div>
         );

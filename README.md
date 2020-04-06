@@ -23,8 +23,7 @@ $ npm build
 
 ## 개발환경
 
-라이브러리: 리액트  
-언어: HTML, CSS, JSX
+리액트 Class Component
 
 ## 기능설명
 
